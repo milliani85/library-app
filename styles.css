@@ -195,12 +195,12 @@ button:hover {
 
 .book-cards {
   display: grid;
-  gap: 15px;
+  gap: 35px;
   grid-template-columns: repeat(3, 1fr);
   margin: 40px 30px 40px 30px;
 }
 
-.book-cards div {
+.green-border {
   background-color: var(--darkGrey);
   padding: 40px 40px 40px 40px;
   border-radius: 10px;
@@ -211,26 +211,51 @@ button:hover {
   text-align: center;
 }
 
+.red-border {
+  background-color: var(--darkGrey);
+  padding: 40px 40px 40px 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.795);
+  border-top: 6px solid var(--red);
+  color: var(--platinum);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 .book-cards h3,
 .book-cards h4,
-.book-cards p {
+.book-cards p:nth-of-type(1) {
   margin-bottom: 30px;
 }
 
-.book-cards div p:nth-of-type(2) {
+.Read {
+  width: 250px;
+  font-size: 1.3rem;
+  padding: 5px;
   border-radius: 7px;
   background-color: var(--green);
   color: black;
   border: none;
   font-weight: 400;
-  width: 240px;
-  margin: auto;
-  font-weight: 400;
+}
+
+.Read:hover {
+  transform: scale(1.1);
+}
+
+.Unread {
+  width: 250px;
+  font-size: 1.3rem;
   padding: 5px;
-  height: 23px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 7px;
+  background-color: var(--red);
+  color: black;
+  border: none;
+  font-weight: 400;
+}
+
+.Unread:hover {
+  transform: scale(1.1);
 }
 
 .remove-card-button {
@@ -282,7 +307,7 @@ button:hover {
   font-size: 1rem;
 }
 
-.form-container input[type="button"] {
+.form-container input[type="submit"] {
   font-size: 1.2rem;
   background-color: var(--green);
   color: black;
@@ -291,7 +316,7 @@ button:hover {
   border-radius: 8px;
 }
 
-.form-container input[type="button"]:hover {
+.form-container input[type="submit"]:hover {
   transform: scale(1.05);
 }
 
